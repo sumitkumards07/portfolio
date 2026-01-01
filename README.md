@@ -1,5 +1,6 @@
-## 🌟 Sumanth Samala's Netflix inspired Portfolio 🌟 - https://sumanthsamala.com/
+## 🌟# Sumit Kumar Portfolio
 
+This is the portfolio website of Sumit Kumar, built with React and TypeScript.
 Welcome to my personal portfolio project! 🚀 This website showcases my work, skills, and experiences in web development. It's designed to be lightweight, customizable, and professional while maintaining an approachable style.
 
 Explore specific subdomains tailored to different tech stacks:
