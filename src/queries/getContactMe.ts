@@ -9,7 +9,7 @@ const dummyContactMe: ContactMe = {
   title: "Full Stack Developer",
   summary: "Open to new opportunities and collaborations. Feel free to reach out!",
   companyUniversity: "Tech University / Innovative Corp",
-  linkedinLink: "https://linkedin.com/in/sumitkumar",
+  linkedinLink: "https://www.linkedin.com/in/sumit-kumar-9159a636b",
   email: "sumit.kumar@example.com",
   phoneNumber: "+1 (555) 123-4567"
 };

@@ -10,7 +10,7 @@ const dummyProfileBanner: ProfileBanner = {
   resumeLink: {
     url: "/resume.pdf"
   },
-  linkedinLink: "https://linkedin.com/in/sumitkumar"
+  linkedinLink: "https://www.linkedin.com/in/sumit-kumar-9159a636b"
 };
 
 export async function getProfileBanner(): Promise<ProfileBanner> {
