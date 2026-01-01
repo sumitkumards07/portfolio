@@ -10,8 +10,8 @@ const dummyContactMe: ContactMe = {
   summary: "Open to new opportunities and collaborations. Feel free to reach out!",
   companyUniversity: "Tech University / Innovative Corp",
   linkedinLink: "https://www.linkedin.com/in/sumit-kumar-9159a636b",
-  email: "sumit.kumar@example.com",
-  phoneNumber: "+1 (555) 123-4567"
+  email: "sumitkumards07@gmail.com",
+  phoneNumber: "+91 8950013181"
 };
 
 export async function getContactMe(): Promise<ContactMe> {
