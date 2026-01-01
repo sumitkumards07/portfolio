@@ -16,19 +16,29 @@
 }
 
 .navbar.scrolled {
-  background-color: #141414; /* Netflix black when scrolled */
+  background-color: #141414;
+  /* Netflix black when scrolled */
 }
 
-.navbar-left, .navbar-right {
+.navbar-left,
+.navbar-right {
   display: flex;
   align-items: center;
 }
 
-.navbar-logo img {
-  height: 30px;
+.navbar-logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #e50914;
+  font-size: 1.8rem;
+  text-decoration: none;
   margin-right: 30px;
   margin-left: 10px;
-  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.navbar-logo-text:hover {
+  color: #e50914;
+  /* Keep red on hover */
 }
 
 /* Navbar Links */
@@ -48,7 +58,8 @@
 }
 
 .navbar-links li a:hover {
-  color: #e50914; /* Netflix red */
+  color: #e50914;
+  /* Netflix red */
 }
 
 /* Profile Icon */
@@ -74,6 +85,7 @@
     height: 20px;
     margin-right: auto;
   }
+
   .profile-icon {
     width: 24px;
     height: 24px;
@@ -137,8 +149,10 @@
     transform: translateX(0);
   }
 
-  .sidebar-logo img {
-    height: 30px;
+  .sidebar-logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #e50914;
+    font-size: 2rem;
     margin-bottom: 20px;
   }
 
@@ -147,13 +161,14 @@
     padding: 0;
     margin: 0;
   }
+
   .sidebar ul li {
     padding: 15px 20px;
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  
+
   .sidebar ul li a {
     color: #fff;
     text-decoration: none;

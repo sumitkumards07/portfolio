@@ -1,19 +1,19 @@
 // queries/getTimeline.ts
-import datoCMSClient from './datoCMSClient';
 import { Skill } from '../types';
 
-const GET_SKILLS = `
-{
-  allSkills(orderBy: category_ASC) {
-    name
-    category
-    description
-    icon
-  }
-}
-`;
+const dummySkills: Skill[] = [
+  { name: "React", category: "Frontend", description: "Library for building UIs", icon: "FaReact" },
+  { name: "Node.js", category: "Backend", description: "Runtime environment", icon: "FaNodeJs" },
+  { name: "TypeScript", category: "Language", description: "Typed JavaScript", icon: "SiTypescript" },
+  { name: "AWS", category: "Cloud", description: "Cloud computing", icon: "FaAws" },
+  { name: "MongoDB", category: "Database", description: "NoSQL Database", icon: "SiMongodb" },
+  { name: "Python", category: "Language", description: "Programming Language", icon: "FaPython" },
+  { name: "Docker", category: "DevOps", description: "Containerization", icon: "FaDocker" },
+  { name: "GraphQL", category: "API", description: "Query Language", icon: "SiGraphql" },
+];
 
 export async function getSkills(): Promise<Skill[]> {
-  const data = await datoCMSClient.request<{ allSkills: Skill[] }>(GET_SKILLS);
-  return data.allSkills;
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(dummySkills), 300);
+  });
 }

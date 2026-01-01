@@ -1,19 +1,15 @@
 // queries/getWorkPermit.ts
-import datoCMSClient from './datoCMSClient';
 import { WorkPermit } from '../types';
 
-const GET_WORK_PERMIT = `
-  query {
-    workPermit {
-      visaStatus
-      expiryDate
-      summary
-      additionalInfo
-    }
-  }
-`;
+const dummyWorkPermit: WorkPermit = {
+  visaStatus: "Work Visa",
+  expiryDate: new Date("2026-12-31"),
+  summary: "Eligible to work in the UK/USA/Canada.",
+  additionalInfo: "No sponsorship required for immediate start."
+};
 
 export async function getWorkPermit(): Promise<WorkPermit> {
-  const data = await datoCMSClient.request<{ workPermit: WorkPermit }>(GET_WORK_PERMIT);
-  return data.workPermit;
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(dummyWorkPermit), 300);
+  });
 }
