@@ -27,8 +27,8 @@ const dummyTimeline: TimelineItem[] = [
   },
   {
     timelineType: 'education',
-    name: "University of Technology",
-    title: "Bachelor of Science in Computer Science",
+    name: "Vellore Institute of Technology",
+    title: "Bachelor of Technology",
     techStack: "Java, Python, Algorithms",
     summaryPoints: [
       "Graduated with Honors.",

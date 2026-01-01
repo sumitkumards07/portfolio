@@ -8,7 +8,7 @@ const dummyContactMe: ContactMe = {
   name: "Sumit Kumar",
   title: "Full Stack Developer",
   summary: "Open to new opportunities and collaborations. Feel free to reach out!",
-  companyUniversity: "Tech University / Innovative Corp",
+  companyUniversity: "Vellore Institute of Technology",
   linkedinLink: "https://www.linkedin.com/in/sumit-kumar-9159a636b",
   email: "sumitkumards07@gmail.com",
   phoneNumber: "+91 8950013181"
