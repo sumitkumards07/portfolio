@@ -3,7 +3,7 @@ import './Projects.css';
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs } from 'react-icons/fa';
 import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo } from 'react-icons/si';
 import { Project } from '../types';
-import { getProjects } from '../queries/getProjects';
+import { getGithubProjects } from '../queries/getGithubProjects';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
 
 const techIcons: { [key: string]: JSX.Element } = {
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
   
   useEffect(() => { 
     async function fetchProjects() {
-      const data = await getProjects();
+      const data = await getGithubProjects();
       setProjects(data);
     }
     
@@ -82,8 +82,23 @@ const Projects: React.FC = () => {
             key={index}
             className="project-card"
             style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
+            onClick={() => window.open(project.link || project.githubUrl, '_blank')}
           >
-            <img src={project.image.url} alt={project.title} className="project-image" />
+            <div className="project-image-container">
+              <img src={project.image.url} alt={project.title} className="project-image" />
+              <div className="project-links">
+                {project.githubUrl && (
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <FaGithub title="View Source" />
+                  </a>
+                )}
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <GrDeploy title="View Live" />
+                  </a>
+                )}
+              </div>
+            </div>
             <div className="project-details">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
