@@ -61,18 +61,28 @@ const techIcons: { [key: string]: JSX.Element } = {
 
 
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>([])
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   
   useEffect(() => { 
     async function fetchProjects() {
-      const data = await getGithubProjects();
-      setProjects(data);
+      try {
+        const data = await getGithubProjects();
+        setProjects(data);
+      } catch (err) {
+        setError('Failed to load projects');
+      } finally {
+        setLoading(false);
+      }
     }
     
     fetchProjects()
   }, [])
   
-  if (projects.length === 0) return <div>Loading...</div>;
+  if (loading) return <div className="loading">Loading projects...</div>;
+  if (error) return <div className="error">{error}</div>;
+  if (projects.length === 0) return <div className="no-projects">No projects found.</div>;
 
   return (
     <div className="projects-container">
