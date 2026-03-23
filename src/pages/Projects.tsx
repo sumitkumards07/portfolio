@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Projects.css';
-import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs } from 'react-icons/fa';
-import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs, FaCode } from 'react-icons/fa';
+import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo, SiJavascript, SiTypescript } from 'react-icons/si';
 import { Project } from '../types';
 import { getGithubProjects } from '../queries/getGithubProjects';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
@@ -15,7 +15,11 @@ const techIcons: { [key: string]: JSX.Element } = {
   "Ruby On Rails": <SiRubyonrails />,
   "Material UI": <SiMaterialdesign />,
   "HTML5": <SiHtml5 />,
+  "HTML": <SiHtml5 />,
   "CSS3": <SiCss3 />,
+  "CSS": <SiCss3 />,
+  "SCSS": <SiCss3 />,
+  "Sass": <SiCss3 />,
   "jQuery": <SiJquery />,
   "AWS-ECS": <SiAwsamplify />,
   'Cognito': <FaAws />,
@@ -57,6 +61,9 @@ const techIcons: { [key: string]: JSX.Element } = {
   'Tailwind CSS': <SiCss3 />,
   'Bootstrap': <SiCss3 />,
   'JQuery': <SiJquery />,
+  'TypeScript': <SiTypescript />,
+  'JavaScript': <SiJavascript />,
+  'JS': <SiJavascript />,
 };
 
 

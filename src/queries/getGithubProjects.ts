@@ -9,10 +9,14 @@ export async function getGithubProjects(): Promise<Project[]> {
       throw new Error('Failed to fetch projects from GitHub');
     }
     const repos = await response.json();
+    console.log(`Successfully fetched ${repos.length} repositories for ${username}`);
 
-    return repos
-      .filter((repo: any) => !repo.fork && !repo.archived)
-      .map((repo: any) => ({
+    const filteredRepos = repos
+      .filter((repo: any) => !repo.fork && !repo.archived);
+    
+    console.log(`Found ${filteredRepos.length} matching repositories (!fork && !archived)`);
+
+    return filteredRepos.map((repo: any) => ({
         title: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
         description: repo.description || 'No description provided.',
         techUsed: repo.language || 'Various',
@@ -22,8 +26,12 @@ export async function getGithubProjects(): Promise<Project[]> {
         link: repo.homepage || repo.html_url,
         githubUrl: repo.html_url,
       }));
-  } catch (error) {
-    console.error('Error fetching GitHub projects:', error);
+  } catch (error: any) {
+    if (error.message?.includes('Failed to fetch')) {
+        console.error('GitHub API error: This might be a rate limit or network issue.');
+    } else {
+        console.error('Error fetching GitHub projects:', error);
+    }
     return [];
   }
 }
