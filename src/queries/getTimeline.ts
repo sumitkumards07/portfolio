@@ -4,26 +4,14 @@ import { TimelineItem } from '../types';
 const dummyTimeline: TimelineItem[] = [
   {
     timelineType: 'work',
-    name: "Tech Solutions Inc.",
-    title: "Senior Developer",
-    techStack: "React, Node.js, AWS",
+    name: "Quantum Cut",
+    title: "Agency Founder & Lead",
+    techStack: "Fullstack Development, Strategic Operations, Leadership",
     summaryPoints: [
-      "Led a team of 5 developers to build a scalable innovative platform.",
-      "Improved performance by 40% through code optimization.",
-      "Implemented CI/CD pipelines reducing deployment time."
+      "Leading an agency focused on delivering cutting-edge digital solutions.",
+      "Managing end-to-end project lifecycles and client relations."
     ],
-    dateRange: "2023 - Present"
-  },
-  {
-    timelineType: 'work',
-    name: "WebCreatives Agency",
-    title: "Frontend Developer",
-    techStack: "Vue.js, Firebase, SCSS",
-    summaryPoints: [
-      "Developed responsive websites for 20+ clients.",
-      "Collaborated with designers to ensure pixel-perfect implementation."
-    ],
-    dateRange: "2021 - 2023"
+    dateRange: "2022 - Present"
   },
   {
     timelineType: 'education',
