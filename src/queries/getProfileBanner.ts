@@ -5,8 +5,8 @@ const dummyProfileBanner: ProfileBanner = {
   backgroundImage: {
     url: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1500&auto=format&fit=crop"
   },
-  headline: "Full Stack Developer | React & Node.js Expert",
-  profileSummary: "Passionate developer with over 3 years of experience building scalable web applications. I specialize in the MERN stack and have a strong foundation in cloud technologies.",
+  headline: "Agency Founder & Lead | Full Stack Developer",
+  profileSummary: "Founder and Lead at Quantum Cut, specializing in building scalable digital solutions and managing end-to-end project lifecycles. Expert in React, Node.js, and modern web architectures.",
   resumeLink: {
     url: "/resume.pdf"
   },

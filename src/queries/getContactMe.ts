@@ -6,9 +6,9 @@ const dummyContactMe: ContactMe = {
     url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop"
   },
   name: "Sumit Kumar",
-  title: "Full Stack Developer",
-  summary: "Open to new opportunities and collaborations. Feel free to reach out!",
-  companyUniversity: "Vellore Institute of Technology",
+  title: "Agency Founder & Lead",
+  summary: "Founder of Quantum Cut. Open to new collaborations and projects. Feel free to reach out!",
+  companyUniversity: "Quantum Cut",
   linkedinLink: "https://www.linkedin.com/in/sumit-kumar-9159a636b",
   email: "sumitkumards07@gmail.com",
   phoneNumber: "+91 8950013181"
