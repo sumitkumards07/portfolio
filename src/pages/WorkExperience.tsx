@@ -60,7 +60,11 @@ const WorkExperience: React.FC = () => {
                 <h3 className="vertical-timeline-element-title">{item.title}</h3>
                 <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
                 <p className="vertical-timeline-element-tech">🔧 {item.techStack}</p>
-                <p>{item.summaryPoints}</p>
+                <ul className="timeline-summary-list">
+                  {item.summaryPoints.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ) : (
               <div style={{ color: 'black' }}>
